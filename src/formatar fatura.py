@@ -33,13 +33,10 @@ def grava_saida(resultado, arquivoSaida):
     arquivo.close()
 
 
-def lista_conteudo(diretorio):
-    todos_arquivos = os.listdir(diretorio)
 
-
-caminho_do_arquivo = r"C:\Users\bruno.alves\OneDrive\Workspace\Phyton\UtilitariosPython\NUBank\src"
-nome_arquivo = "\gastos.txt"
-data = ler_arquivo(caminho_do_arquivo+nome_arquivo)
+caminho_do_arquivo = r"Gastos.txt"
+# caminho_do_arquivo = "fat.txt"
+data = ler_arquivo(caminho_do_arquivo)
 
 if data is None:
     sys.exit(-1)
@@ -50,13 +47,13 @@ linha = ""
 for x in data:
     linha += " " + x[:len(x) - 1] + "\t"
     cont += 1
-    if cont == 3:
+    if cont == 2:
         resultado.append(linha)
         cont =0
         linha = ""
 
 
-grava_saida(resultado, caminho_do_arquivo + "saida.txt")
+grava_saida(resultado,  "saida.txt")
 
 
 

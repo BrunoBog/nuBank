@@ -2,7 +2,7 @@ import configparser
 import json
 from datetime import datetime
 from pynubank import Nubank
-from NUBank.src.model.Compra import Despesa
+from src.model.Compra import Despesa
 from flask import Flask, render_template
 
 app = Flask(__name__)
